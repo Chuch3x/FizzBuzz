@@ -1,5 +1,8 @@
 function fizzBuzz(num){
-  if(num % 3 == 0){
+  if(num % 3 ==0 && num % 5 == 0){
+    return "FizzBuzz";
+  }
+  else if(num % 3 == 0){
     return "Fizz";
   }
   else if(num % 5 == 0){
@@ -15,13 +18,16 @@ describe("FizzBuzz", () => {
   it("deberia mostrar el numero 2", () => {
     expect(fizzBuzz(2)).toEqual(2);
   });
-  it("deberia mostrar el numero fizz para el numero 3", () => {
+  it("deberia mostrar fizz para el numero 3", () => {
     expect(fizzBuzz(3)).toEqual("Fizz");
   });
-  it("deberia mostrar el numero fizz para multiplos de 3", () => {
+  it("deberia mostrar fizz para multiplos de 3", () => {
     expect(fizzBuzz(6)).toEqual("Fizz");
   });
-  it("deberia mostrar el numero buzz para multiplos de 5", () => {
+  it("deberia mostrar buzz para multiplos de 5", () => {
     expect(fizzBuzz(10)).toEqual("Buzz");
+  });
+  it("deberia mostrar fizzBuzz para multiplos de 3 y 5", () => {
+    expect(fizzBuzz(15)).toEqual("FizzBuzz");
   });
 });
