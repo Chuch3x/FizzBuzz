@@ -1,5 +1,5 @@
 function fizzBuzz(num){
-  if(num == 3){
+  if(num % 3 == 0){
     return "Fizz";
   }
   return num;
@@ -14,5 +14,8 @@ describe("FizzBuzz", () => {
   });
   it("deberia mostrar el numero fizz para el numero 3", () => {
     expect(fizzBuzz(3)).toEqual("Fizz");
+  });
+  it("deberia mostrar el numero fizz para multiplos de 3", () => {
+    expect(fizzBuzz(6)).toEqual("Fizz");
   });
 });
