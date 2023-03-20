@@ -15,14 +15,15 @@ function cadenaNumeros(tam){
   let numeros = "";
   for(let i = 0; i < tam; i++){
     if(i == tam-1){
-      numeros = numeros + String(i+1);
+      numeros = numeros + fizzBuzz(i+1);
     }
     else{
-      numeros = numeros + String(i+1) + " ";
+      numeros = numeros + fizzBuzz(i+1) + ", ";
     }
   }
   return numeros;
 }
+
 
 describe("FizzBuzz", () => {
   it("deberia mostrar el numero 1", () => {
@@ -44,7 +45,9 @@ describe("FizzBuzz", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz");
   });
   it("deberia mostrar una cadena de numeros dado un tamanio", () => {
-    expect(cadenaNumeros(5)).toEqual("1 2 3 4 5");
+    expect(cadenaNumeros(2)).toEqual("1, 2");
   });
-
+  it("deberia mostrar una lista de numeros y si son multiplos de 3 o 5 poner Fizz o Buzz", () => {
+    expect(cadenaNumeros(7)).toEqual("1, 2, Fizz, 4, Buzz, Fizz, 7");
+  });
 });
