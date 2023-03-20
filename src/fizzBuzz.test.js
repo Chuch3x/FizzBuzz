@@ -1,9 +1,13 @@
 function fizzBuzz(num){
-  return "Fizz";
+  return num;
 }
 
 describe("FizzBuzz", () => {
-  it("deberia mostrar fizz para el numero 1", () => {
-    expect(fizzBuzz(1)).toEqual("Fizz");
+  it("deberia mostrar el numero 1", () => {
+    expect(fizzBuzz(1)).toEqual(1);
   });
+  it("deberia mostrar el numero 2", () => {
+    expect(fizzBuzz(2)).toEqual(2);
+  });
+
 });
