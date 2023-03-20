@@ -2,6 +2,9 @@ function fizzBuzz(num){
   if(num % 3 == 0){
     return "Fizz";
   }
+  else if(num % 5 == 0){
+    return "Buzz";
+  }
   return num;
 }
 
@@ -17,5 +20,8 @@ describe("FizzBuzz", () => {
   });
   it("deberia mostrar el numero fizz para multiplos de 3", () => {
     expect(fizzBuzz(6)).toEqual("Fizz");
+  });
+  it("deberia mostrar el numero buzz para multiplos de 5", () => {
+    expect(fizzBuzz(10)).toEqual("Buzz");
   });
 });
