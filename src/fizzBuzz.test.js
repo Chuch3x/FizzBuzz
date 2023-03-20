@@ -11,6 +11,19 @@ function fizzBuzz(num){
   return num;
 }
 
+function cadenaNumeros(tam){
+  let numeros = "";
+  for(let i = 0; i < tam; i++){
+    if(i == tam-1){
+      numeros = numeros + String(i+1);
+    }
+    else{
+      numeros = numeros + String(i+1) + " ";
+    }
+  }
+  return numeros;
+}
+
 describe("FizzBuzz", () => {
   it("deberia mostrar el numero 1", () => {
     expect(fizzBuzz(1)).toEqual(1);
@@ -30,4 +43,8 @@ describe("FizzBuzz", () => {
   it("deberia mostrar fizzBuzz para multiplos de 3 y 5", () => {
     expect(fizzBuzz(15)).toEqual("FizzBuzz");
   });
+  it("deberia mostrar una cadena de numeros dado un tamanio", () => {
+    expect(cadenaNumeros(5)).toEqual("1 2 3 4 5");
+  });
+
 });
